@@ -31,3 +31,7 @@ button {
     margin: auto;  
     width: 25%;
 }
+
+#logo {
+  border: solid 15px black;
+}

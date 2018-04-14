@@ -1,49 +1,79 @@
 body {
-    /* background-color: rgb(226, 210, 210); */
-    /* background-image: url("../img/rps_background.jpg"); */
-    background-image: url("http://via.placeholder.com/1300x800");
-    background-repeat: repeat;
-    /* background-image: url("rpslogo.png"); */
+  background-color: rgb(231, 227, 227);
+  /* background-image: url("../img/rps_background.jpg"); */
+  background-repeat: repeat;
 }
 
 header {
-    border: solid 2px black;
-    text-align: center;
-    /* height: 400px; */
-}
-
-h1 {
-    font-family: 'Black And White Picture', sans-serif;
-    font-size: 150px;
-    text-align: center;
-}
-
-main {
-    border: solid 2px black;
-    /* height: 800px; */
-}
-
-h3 {
-    text-align: center;
-}
-
-#buttons {
-    margin: auto;
-    height: 100px;
-    width: 50%;
-    border: solid 1px red;
-}
-
-button {
-    margin: auto;  
-    width: 25%;
+  border: solid 2px black;
+  text-align: center;
+  height: 500px;
 }
 
 #logo {
   border: solid 5px black;
+  height: 125px;
+  margin-top: 15px;
 }
 
-footer{
+h1 {
+  font-family: 'Black And White Picture', sans-serif;
+  font-size: 150px;
+  text-align: center;
+  margin: 0px;
+}
+
+p {
+  font-family: 'Stylish', sans-serif;
+  font-size: 30px;
+  text-align: center;
+  margin: 2px;
+  margin-bottom: 25px;
+}
+
+#play_game {
+  background-color: #4CAF50;
+  font-size: 15px;
+  text-align: center;
+  padding: 15px 25px;
+  margin: auto;
+  height: 50px;
+  width: 150px;
+  cursor: pointer;
+  border-radius: 10px;
   border: solid 1px black;
+  box-shadow: 0 5px black;
+}
+
+#play_game:hover {
+  background-color: #3e8e41;
+}
+
+#play_game:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+main {
+    /* border: solid 2px black; */
+    /* height: 800px; */
+}
+
+#buttons {
+  margin: auto;
+  height: 100px;
+  width: 50%;
+  border: solid 1px red;
+}
+
+/* button {
+    margin: auto;  
+    width: 25%;
+} */
+
+
+footer{
+  /* border: solid 1px black; */
   /* height: 200px; */
 }

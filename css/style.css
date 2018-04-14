@@ -1,39 +1,52 @@
 body {
-  background-color: rgb(231, 227, 227);
-  /* background-image: url("../img/rps_background.jpg"); */
+  /* background-color: rgb(231, 227, 227); */
+  background-image: url("../img/background.png");
   background-repeat: repeat;
+  height: 99%;
+ 
 }
 
 header {
-  border: solid 2px black;
   text-align: center;
-  height: 500px;
+  /* height: 300px; */
 }
 
-#logo {
+/* #logo {
   border: solid 5px black;
   height: 125px;
   margin-top: 15px;
-}
+} */
+
+/* #header_title{
+  margin-bottom: 200px;
+} */
 
 h1 {
   font-family: 'Black And White Picture', sans-serif;
-  font-size: 150px;
+  font-size: 105px;
   text-align: center;
   margin: 0px;
 }
 
+/* #p_header {
+  margin-top: 150px;
+} */
+
+#play_btn {
+  margin-top: 33%;
+}
 p {
   font-family: 'Stylish', sans-serif;
   font-size: 30px;
   text-align: center;
-  margin: 2px;
-  margin-bottom: 25px;
+  margin: 1px;
+  /* margin-bottom: 25px; */
 }
 
 #play_game {
   background-color: #4CAF50;
   font-size: 15px;
+  font-weight: bolder;
   text-align: center;
   padding: 15px 25px;
   margin: auto;

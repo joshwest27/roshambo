@@ -1,40 +1,22 @@
 body {
-  /* background-color: rgb(231, 227, 227); */
   background-image: url("../img/background.png");
-  background-repeat: repeat;
-  height: 99%;
- 
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
 }
-
-header {
-  text-align: center;
-  /* height: 300px; */
-}
-
-/* #logo {
-  border: solid 5px black;
-  height: 125px;
-  margin-top: 15px;
-} */
-
-/* #header_title{
-  margin-bottom: 200px;
-} */
 
 h1 {
   font-family: 'Black And White Picture', sans-serif;
-  font-size: 105px;
+  font-size: 110px;
   text-align: center;
   margin: 0px;
 }
 
-/* #p_header {
-  margin-top: 150px;
-} */
-
 #play_btn {
-  margin-top: 33%;
+  margin: 35% 45% 
+  
 }
+
 p {
   font-family: 'Stylish', sans-serif;
   font-size: 30px;
@@ -45,15 +27,15 @@ p {
 
 #play_game {
   background-color: #4CAF50;
-  font-size: 15px;
+  font-size: 16px;
   font-weight: bolder;
   text-align: center;
   padding: 15px 25px;
-  margin: auto;
+  /* margin: auto; */
   height: 50px;
   width: 150px;
   cursor: pointer;
-  border-radius: 10px;
+  border-radius: 12px;
   border: solid 1px black;
   box-shadow: 0 5px black;
 }
@@ -65,7 +47,7 @@ p {
 #play_game:active {
   background-color: #3e8e41;
   box-shadow: 0 5px #666;
-  transform: translateY(4px);
+  transform: translateY(5px);
 }
 
 main {
@@ -79,11 +61,6 @@ main {
   width: 50%;
   border: solid 1px red;
 }
-
-/* button {
-    margin: auto;  
-    width: 25%;
-} */
 
 
 footer{

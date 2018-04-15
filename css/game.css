@@ -53,3 +53,70 @@ button:active {
     height: 100px;
     width: 100px;
 }
+
+#match {
+    display: flex;
+    justify-content: center;
+}
+
+#challenge {
+    background-color: rgba(163, 157, 152, 0.774);
+    font-size: 16px;
+    font-weight: bolder;
+    text-align: center;
+    padding: 15px 25px;
+    height: 50px;
+    width: 150px;
+    cursor: pointer;
+    border-radius: 12px;
+    border: solid 1px black;
+    box-shadow: 0 5px black;
+  }
+  
+  #challenge:hover {
+    background-color: rgba(92, 89, 87, 0.774);
+    transform: scale(1.1);
+  }
+  
+  #challenge:active {
+    background-color: rgba(92, 89, 87, 0.774);
+    box-shadow: 0 5px rgb(34, 33, 33);
+    transform: translateY(3px);
+  }
+
+  #battle {
+    margin-top: 124px;
+    display: flex;
+    justify-content: center;
+  }
+
+  #results {
+    margin-top: 124px;
+    display: flex;
+    justify-content: center;
+  }
+  
+
+  #fistRight {
+    height: 400px;
+  }
+
+  #fistLeft {
+    height: 400px;
+  }
+
+  #papRight {
+    height: 400px;
+  }
+
+  #papLeft {
+    height: 400px;
+  }
+
+  #sciRight {
+    height: 400px;
+  }
+
+  #sciLeft {
+    height: 400px;
+  }

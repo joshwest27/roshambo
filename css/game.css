@@ -1,0 +1,55 @@
+body {
+    background-color: white;
+}
+
+#header_container {
+    background-color: rgb(253, 80, 80);
+}
+
+h1 {
+    font-family: 'Black And White Picture', sans-serif;
+    font-size: 75px;
+    text-align: center;
+    margin: 0px;
+}
+
+h3 {
+    font-family: 'Stylish', sans-serif;
+    font-size: 30px;
+    text-align: center;
+    margin: 15px;
+}
+
+#buttons {
+    display: flex;
+    justify-content: center;
+}
+button {
+    border: solid 3px black;
+    margin: 15px;
+    padding: 0;
+}
+
+button:hover {
+    transform: scale(1.2);
+}
+
+button:active {
+    box-shadow: 0 5px rgb(34, 33, 33);
+    transform: translateY(5px);
+}
+
+#rockBtn {
+    height: 100px;
+    width: 100px;
+}
+
+#paperBtn {
+    height: 100px;
+    width: 100px;
+}
+
+#scissorBtn {
+    height: 100px;
+    width: 100px;
+}

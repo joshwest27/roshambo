@@ -5,9 +5,22 @@ body {
   background-size: cover;
 }
 
+#sound {
+  position: absolute;
+  top: 40px;
+  right: 45px;
+}
+
+#sound:hover {
+  transform: scale(1.1);
+  position: absolute;
+  top: 40px;
+  right: 45px;
+}
+
 h1 {
   font-family: 'Black And White Picture', sans-serif;
-  font-size: 110px;
+  font-size: 115px;
   text-align: center;
   margin: 0px;
 }
@@ -42,12 +55,13 @@ p {
 
 #play_game:hover {
   background-color: #3e8e41;
+  transform: scale(1.1);
 }
 
 #play_game:active {
   background-color: #3e8e41;
   box-shadow: 0 5px #666;
-  transform: translateY(5px);
+  transform: translateY(3px);
 }
 
 main {

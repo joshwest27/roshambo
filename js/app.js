@@ -3,11 +3,23 @@
 
 
 // Login page
-const welcomeUser = (userName) => {
-  console.log(`Hello ${userName}. Let's play some Rock, Paper, Scissors!`);
-};
+// const welcomeUser = (userName) => {
+//   console.log(`Hello ${userName}. Let's play some Rock, Paper, Scissors!`);
+// };
 
-welcomeUser();
+// welcomeUser();
 
+// toggle sound icon
+$('#muteIcon').hide();
+
+$('#sndIcon').click(function() {
+  $('#sndIcon').hide();
+  $('#muteIcon').show();
+});
+
+$('#muteIcon').click(function() {
+  $('#muteIcon').hide();
+  $('#sndIcon').show();
+});
 
 

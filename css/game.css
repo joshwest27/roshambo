@@ -3,7 +3,7 @@ body {
 }
 
 #header_container {
-    background-color: rgb(253, 80, 80);
+    background-color: rgb(151, 164, 168);
 }
 
 h1 {
@@ -17,7 +17,7 @@ h3 {
     font-family: 'Stylish', sans-serif;
     font-size: 30px;
     text-align: center;
-    margin: 15px;
+    margin: 20px 15px 10px;
 }
 
 #buttons {

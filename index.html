@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/layout.css">
     <link href="https://fonts.googleapis.com/css?family=Black+And+White+Picture|Permanent+Marker|Stylish" rel="stylesheet">
     <audio id="sndBtn" src="sounds/gameintrooption2.mp3" autoplay="true"></audio>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
@@ -13,7 +14,7 @@
 </head>
 <body>
 
-    <header id="header_conatainer">
+    <header id="header_container">
         <a href="#" id="sndIcon" onclick="document.getElementById('sndBtn').muted = true; return false"><img id="sound" src="img/sound_on.png"></a>
         <a href="#" id="muteIcon" onclick="document.getElementById('sndBtn').muted = false; return true"><img id="sound" src="img/mute.png"></a>
         <div id="header_title">
@@ -23,16 +24,12 @@
         <div id="p_header">
           <p>Let's play a game of Rock, Paper, Scissors!</p>
         </div>
-            <!-- <nav>
-                <a href="#">Home</a>
-                <a href="#">About</a>
-            </nav> -->
     </header>
 
     <main>
 
         <div id="play_btn">
-            <button id="play_game" type="button">Play Game!</button>
+            <a href="game.html"><button id="play_game" type="button">Play Game!</button></a>
         </div>
 
     </main>

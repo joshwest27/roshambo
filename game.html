@@ -1,26 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="css/reset.css">
+        <link rel="stylesheet" href="css/game.css">
+        <!-- <link rel="stylesheet" href="css/layout.css"> -->
+        <link href="https://fonts.googleapis.com/css?family=Black+And+White+Picture|Permanent+Marker|Stylish" rel="stylesheet">
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+        <title>Ro Sham Bo</title>
+     </head>
 <body>
-
-    <header></header>
-
+    <header id="header_container">
+        <!-- <a href="#" id="sndIcon" onclick="document.getElementById('sndBtn').muted = true; return false"><img id="sound" src="img/sound_on.png"></a>
+        <a href="#" id="muteIcon" onclick="document.getElementById('sndBtn').muted = false; return true"><img id="sound" src="img/mute.png"></a> -->
+        <div id="header_title">
+            <h1>Ro Sham Bo</h1>
+        </div>
+    </header>
+        
     <main>
+        <div id="selection">
+            <h3>Make your selection!</h3>
 
-
-        <!-- <h3>Make your selection!</h3>
-
-        <div id="buttons">
-        <button id="b1" type="button">Rock</button>
-        <button id="b2" type="button">Paper</button>
-        <button id="b3" type="button">Scissors</button>
-        </div> -->
-
+            <div id="buttons">
+                <button id="b1" type="button"><img id="rockBtn" src="img/rr.png"></button>
+                <button id="b2" type="button"><img id="paperBtn" src="img/pr.png"></button>
+                <button id="b3" type="button"><img id="scissorBtn" src="img/sr.png"></button>
+            </div>
+        </div>
     </main>
 
     <footer></footer>

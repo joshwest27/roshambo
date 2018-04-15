@@ -9,7 +9,7 @@
 
 // welcomeUser();
 
-// toggle sound icon
+// Toggle sound on and off
 $('#muteIcon').hide();
 
 $('#sndIcon').click(function() {
@@ -21,5 +21,6 @@ $('#muteIcon').click(function() {
   $('#muteIcon').hide();
   $('#sndIcon').show();
 });
+
 
 

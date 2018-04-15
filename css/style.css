@@ -9,6 +9,7 @@ body {
   position: absolute;
   top: 40px;
   right: 45px;
+  cursor: pointer;
 }
 
 #sound:hover {
@@ -16,6 +17,7 @@ body {
   position: absolute;
   top: 40px;
   right: 45px;
+  cursor: pointer;
 }
 
 h1 {
@@ -26,7 +28,7 @@ h1 {
 }
 
 #play_btn {
-  margin: 35% 45% 
+  margin: 35% 45% 0;
   
 }
 
@@ -39,7 +41,7 @@ p {
 }
 
 #play_game {
-  background-color: #4CAF50;
+  background-color: rgb(133, 107, 58);
   font-size: 16px;
   font-weight: bolder;
   text-align: center;
@@ -54,13 +56,13 @@ p {
 }
 
 #play_game:hover {
-  background-color: #3e8e41;
+  background-color: #7c560e;
   transform: scale(1.1);
 }
 
 #play_game:active {
-  background-color: #3e8e41;
-  box-shadow: 0 5px #666;
+  background-color: #7c560e;
+  box-shadow: 0 5px rgb(34, 33, 33);
   transform: translateY(3px);
 }
 
@@ -74,10 +76,4 @@ main {
   height: 100px;
   width: 50%;
   border: solid 1px red;
-}
-
-
-footer{
-  /* border: solid 1px black; */
-  /* height: 200px; */
 }

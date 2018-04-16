@@ -3,17 +3,35 @@
 // Sounds
 let btnClick = new Audio('sounds/clickSound.mp3');
 let matchStart = new Audio('sounds/match_start.mp3');
-let soundsArr = [btnClick, matchStart];
+let playGame = new Audio('sounds/playGame.mp3');
+let soundsArr = [btnClick, matchStart, playGame];
 
-// Assign value to RPS choice
-let myRock;
-let myPaper;
-let myScissors;
+// Assign value to RPS choice & global variable
+let myRock = false;
+let myPaper = false;
+let myScissors = false;
+let compChoice = '';
+
+// Generate random number
+function randNumber() {
+  compChoice = (Math.floor(Math.random() * 3) + 1);
+  if(compChoice === 1) {
+    compChoice = '<img id="fistLeft" src="img/rockLeft.jpg"/>';
+  }else if(compChoice === 2) {
+    compChoice = '<img id="papLeft" src="img/paperLeft.jpg"/>';
+  }else{
+    compChoice = '<img id="sciLeft" src="img/scissorsLeft.jpg"/>';
+  }
+  console.log(compChoice);
+}
 
 // Hide challenge button
 $('#challenge').hide();
 $('#battle').hide();
-$('#results').hide();
+$('#papRight').hide();
+$('#papLeft').hide();
+$('#sciRight').hide();
+$('#sciLeft').hide();
 
 // Player chooses rock
 $('#b1').click(function() {
@@ -48,6 +66,7 @@ $('#b3').click(function() {
 $(document).ready(function () {
   $('#challenge').click(function() {
     soundsArr[1].play();
+    randNumber();
     $('#battle').show();
     $('#battle').effect( 'bounce', {times:3.5}, 'slow');
     $('#battle').fadeOut(350);
@@ -55,11 +74,20 @@ $(document).ready(function () {
   });
 });
 
+setTimeout(results, 4500);
+function results() {
+  showResults();
+}
+
 function showResults() {
-    $('#battle').delay(1500).fadeIn();
   if(myRock === true){
-    $('#battle').replaceWith('<img id="fistRight" src="img/rockRight.jpg"/>').fadeIn(5000);
+    $('#battle').replaceWith('<img id="fistRight" src="img/rockRight.jpg"/>', compChoice).fadeIn(1200);
+  }else if(myPaper === true) {
+    $('#results').replaceWith('<img id="papRight" src="img/paperRight.jpg"/>', compChoice).fadeIn(1200);
+  }else if(myScissors === true) {
+    $('#results').replaceWith('<img id="sciRight" src="img/scissorsRight.jpg"/>', compChoice).fadeIn(1200);
   }
 }
+
 
 

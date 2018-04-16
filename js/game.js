@@ -22,7 +22,6 @@ function randNumber() {
   }else{
     compChoice = '<img id="sciLeft" src="img/scissorsLeft.jpg"/>';
   }
-  console.log(compChoice);
 }
 
 // Hide challenge button
@@ -34,6 +33,7 @@ $('#papRight').hide();
 $('#papLeft').hide();
 $('#sciRight').hide();
 $('#sciLeft').hide();
+$('#results').hide();
 
 // Player chooses rock
 $('#b1').click(function() {
@@ -67,7 +67,7 @@ $('#b3').click(function() {
 
 $(document).ready(function () {
   $('#challenge').click(function() {
-    soundsArr[1].play();
+    // soundsArr[1].play();
     randNumber();
     $('#battle').show();
     $('#battle').effect( 'bounce', {times:3.5}, 'slow');
@@ -76,7 +76,7 @@ $(document).ready(function () {
   });
 });
 
-setTimeout(results, 4000);
+setTimeout(results, 4500);
 function results() {
   showResults();
 }
@@ -92,7 +92,16 @@ function showResults() {
   }else if(myScissors === true) {
     $('#fistRight').replaceWith('<img id="sciRight" src="img/scissorsRight.jpg"/>', compChoice).fadeIn(1000);
   }
+  showRound();
 }
+
+// Challege button innerHTML change
+function showRound() {
+  document.getElementById('challenge').innerHTML = 'Round One!';
+  $('#challenge').fadeIn(1000);
+}
+
+
 
 
 

@@ -70,46 +70,75 @@ button:active {
     cursor: pointer;
     border-radius: 12px;
     box-shadow: 0 5px black;
-  }
+}
   
-  #challenge:hover {
+#challenge:hover {
     background-color: rgba(92, 89, 87, 0.774);
     transform: scale(1.1);
-  }
+}
   
-  #challenge:active {
+#challenge:active {
     background-color: rgba(92, 89, 87, 0.774);
     box-shadow: 0 5px rgb(34, 33, 33);
     transform: translateY(3px);
-  }
+}
 
-  #battle {
-    margin-top: 120px;
+#battle {
+    margin-top: 75px;
     display: flex;
     justify-content: center;
-  }
+}
 
 
-  #fistRight {
+#fistRight {
     height: 400px;
-  }
+}
 
-  #fistLeft {
+#fistLeft {
     height: 400px;
-  }
+}
 
-  #papRight {
+#papRight {
     height: 400px;
-  }
+}
 
-  #papLeft {
+#papLeft {
     height: 400px;
-  }
+}
 
-  #sciRight {
+#sciRight {
     height: 400px;
-  }
+}
 
-  #sciLeft {
+#sciLeft {
     height: 400px;
-  }
+}
+
+#again {
+    display: flex;
+    justify-content: center;
+}
+
+#playAgain {
+    background-color: rgba(163, 157, 152, 0.774);
+    font-size: 16px;
+    font-weight: bolder;
+    text-align: center;
+    padding: 15px 25px;
+    height: 50px;
+    width: 150px;
+    cursor: pointer;
+    border-radius: 12px;
+    box-shadow: 0 5px black;
+}
+  
+#playAgain:hover {
+    background-color: rgba(92, 89, 87, 0.774);
+    transform: scale(1.1);
+}
+  
+#playAgain:active {
+    background-color: rgba(92, 89, 87, 0.774);
+    box-shadow: 0 5px rgb(34, 33, 33);
+    transform: translateY(3px);
+}

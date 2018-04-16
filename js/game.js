@@ -28,6 +28,8 @@ function randNumber() {
 // Hide challenge button
 $('#challenge').hide();
 $('#battle').hide();
+$('#rockRight').hide();
+$('#rockRight').hide();
 $('#papRight').hide();
 $('#papLeft').hide();
 $('#sciRight').hide();
@@ -74,18 +76,21 @@ $(document).ready(function () {
   });
 });
 
-setTimeout(results, 4500);
+setTimeout(results, 4000);
 function results() {
   showResults();
 }
 
 function showResults() {
+  $('#fistRight').hide();
+  $('#fistLeft').hide();
+  $('#battle').fadeIn(1000);
   if(myRock === true){
-    $('#battle').replaceWith('<img id="fistRight" src="img/rockRight.jpg"/>', compChoice).fadeIn(1200);
+    $('#fistRight').replaceWith('<img id="fistRight" src="img/rockRight.jpg"/>', compChoice).fadeIn(1000);
   }else if(myPaper === true) {
-    $('#results').replaceWith('<img id="papRight" src="img/paperRight.jpg"/>', compChoice).fadeIn(1200);
+    $('#fistRight').replaceWith('<img id="papRight" src="img/paperRight.jpg"/>', compChoice).fadeIn(1000);
   }else if(myScissors === true) {
-    $('#results').replaceWith('<img id="sciRight" src="img/scissorsRight.jpg"/>', compChoice).fadeIn(1200);
+    $('#fistRight').replaceWith('<img id="sciRight" src="img/scissorsRight.jpg"/>', compChoice).fadeIn(1000);
   }
 }
 

@@ -6,6 +6,14 @@ body {
     background-color: rgb(151, 164, 168);
 }
 
+#scoreboard {
+    display: flex;
+    justify-content: center;
+}
+
+#scoreboard h3 {
+    padding: 0 20px 0 20px;
+}
 h1 {
     font-family: 'Black And White Picture', sans-serif;
     font-size: 75px;
@@ -60,7 +68,7 @@ button:active {
 }
 
 #challenge {
-    background-color: rgba(24, 131, 10, 0.801);
+    background-color: rgba(76, 212, 41, 0.774);
     font-size: 16px;
     font-weight: bolder;
     text-align: center;
@@ -73,12 +81,12 @@ button:active {
 }
   
 #challenge:hover {
-    background-color: rgba(20, 223, 13, 0.863);
+    background-color: rgba(22, 128, 12, 0.774);
     transform: scale(1.1);
 }
   
 #challenge:active {
-    background-color: rgba(20, 223, 13, 0.863);
+    background-color: rgba(22, 128, 12, 0.774);
     box-shadow: 0 5px rgb(34, 33, 33);
     transform: translateY(3px);
 }
@@ -119,7 +127,11 @@ button:active {
     justify-content: center;
 }
 
-#playAgain {
+#results {
+
+}
+
+/* #playAgain {
     background-color: rgba(163, 157, 152, 0.774);
     font-size: 16px;
     font-weight: bolder;
@@ -141,4 +153,4 @@ button:active {
     background-color: rgba(92, 89, 87, 0.774);
     box-shadow: 0 5px rgb(34, 33, 33);
     transform: translateY(3px);
-}
+} */

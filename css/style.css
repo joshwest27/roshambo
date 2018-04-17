@@ -7,7 +7,7 @@
 }
 
 #sound:hover {
-  transform: scale(1.1);
+  transform: scale(1.2);
   position: absolute;
   top: 40px;
   right: 45px;
@@ -49,7 +49,7 @@ p {
 
 #play_game:hover {
   background-color: #7c560e;
-  transform: scale(1.1);
+  transform: scale(1.2);
 }
 
 #play_game:active {

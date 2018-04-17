@@ -1,0 +1,81 @@
+body {
+    background-image: url("../img/background2.png");
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+    }
+
+#homeIcon {
+    position: absolute;
+    top: 40px;
+    right: 45px;
+    cursor: pointer;
+}
+  
+#homeIcon:hover {
+    transform: scale(1.2);
+    position: absolute;
+    top: 40px;
+    right: 45px;
+    cursor: pointer;
+}
+
+#game {
+    position: absolute;
+    top: 75px;
+    right: 45px;
+    cursor: pointer;
+}
+  
+#game:hover {
+    transform: scale(1.2);
+    position: absolute;
+    top: 75px;
+    right: 45px;
+    cursor: pointer;
+}
+  
+h1 {
+    font-family: 'Black And White Picture', sans-serif;
+    font-size: 100px;
+    text-align: center;
+    margin: 0px;
+}
+
+#headshot {
+    border: solid 1px white;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+  
+#headshot:hover {
+    transform: scale(1.1);
+}
+
+#header_container {
+    height: 300px;
+}
+
+#aboutMe {
+    display: flex;
+    justify-content: center;
+}
+
+h3 {
+    font-family: 'Stylish', sans-serif;
+    font-weight: bolder;
+    font-size: 50px;
+}
+
+#aboutPara {
+    display: flex;
+    justify-content: center;
+    margin: 1% 10%;
+}
+
+p {
+    font-family: 'Stylish', sans-serif;
+    font-weight: bolder;
+    font-size: 35px;
+}

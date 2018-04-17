@@ -6,6 +6,36 @@ body {
     background-color: rgb(151, 164, 168);
 }
 
+#homeIcon {
+    position: absolute;
+    top: 35px;
+    right: 45px;
+    cursor: pointer;
+}
+
+#homeIcon:hover {
+    transform: scale(1.2);
+    position: absolute;
+    top: 35px;
+    right: 45px;
+    cursor: pointer;
+  }
+
+#about {
+    position: absolute;
+    top: 75px;
+    right: 45px;
+    cursor: pointer;
+}
+
+#about:hover {
+    transform: scale(1.2);
+    position: absolute;
+    top:75px;
+    right: 45px;
+    cursor: pointer;
+  }
+
 #scoreboard {
     display: flex;
     justify-content: center;
@@ -127,30 +157,32 @@ button:active {
     justify-content: center;
 }
 
-#results {
-
+#nextMatch {
+    display: flex;
+    justify-content: center;
 }
 
-/* #playAgain {
-    background-color: rgba(163, 157, 152, 0.774);
+#nextGame {
+    background-color: rgba(143, 35, 21, 0.774);
     font-size: 16px;
     font-weight: bolder;
     text-align: center;
-    padding: 15px 25px;
+    padding: 10px 20px;
     height: 50px;
     width: 150px;
     cursor: pointer;
-    border-radius: 12px;
+    border-radius: 50px;
     box-shadow: 0 5px black;
+    margin: 0;
 }
   
-#playAgain:hover {
-    background-color: rgba(92, 89, 87, 0.774);
-    transform: scale(1.1);
+#nextGame:hover {
+    background-color: rgba(230, 58, 28, 0.808);
+    transform: scale(1.2);
 }
   
-#playAgain:active {
-    background-color: rgba(92, 89, 87, 0.774);
+#nextGame:active {
+    background-color: rgba(230, 58, 28, 0.808);
     box-shadow: 0 5px rgb(34, 33, 33);
-    transform: translateY(3px);
-} */
+    transform: translateY(2px);
+}

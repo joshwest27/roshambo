@@ -4,7 +4,11 @@
 let btnClick = new Audio('sounds/clickSound.mp3');
 let matchStart = new Audio('sounds/match_start.mp3');
 let playGame = new Audio('sounds/playGame.mp3');
-let soundsArr = [btnClick, matchStart, playGame];
+let winSound = new Audio('sounds/win.mp3');
+let loseSound = new Audio('sounds/lose.mp3');
+let loseGame = new Audio('sounds/boo.mp3');
+let tieGame = new Audio('sounds/tie.mp3');
+let soundsArr = [btnClick, matchStart, playGame, winSound, loseSound, loseGame, tieGame];
 
 // Assign boolean to RPS choice & global variable
 let myRock = false;
@@ -35,17 +39,22 @@ function randNumber() {
   }
 }
 
-// Hide images
-$('#challenge').hide();
-$('#battle').hide();
-$('#rockRight').hide();
-$('#rockRight').hide();
-$('#papRight').hide();
-$('#papLeft').hide();
-$('#sciRight').hide();
-$('#sciLeft').hide();
-$('#results').hide();
 
+// Hide images
+function hideImages() {
+  $('#challenge').hide();
+  $('#battle').hide();
+  $('#rockRight').hide();
+  $('#rockLeft').hide();
+  $('#papRight').hide();
+  $('#papLeft').hide();
+  $('#sciRight').hide();
+  $('#sciLeft').hide();
+  $('#results').hide();
+  $('#nextGame').hide();
+}
+hideImages();
+initiateMatch();
 
 // Player chooses rock
 $(document).ready(function() {
@@ -86,12 +95,10 @@ $(document).ready(function() {
   });
 });
 
-
-
-// Initialize game when Good Luck button is pushed
-$(document).ready(function () {
+// Initialize game when Good Luck/Next Match button is pushed
+function initiateMatch() {
   $('#challenge').click(function() {
-    soundsArr[1].play();
+    // soundsArr[1].play();
     randNumber();
     $('#battle').show();
     $('#battle').effect( 'bounce', {times:2}, 'slow');
@@ -100,7 +107,21 @@ $(document).ready(function () {
     setTimeout(showResults, 1500);
     scoreBoard();
   });
-});
+}
+
+// Initialize game when Good Luck/Next Match button is pushed
+// $(document).ready(function () {
+//   $('#challenge').click(function() {
+//     // soundsArr[1].play();
+//     randNumber();
+//     $('#battle').show();
+//     $('#battle').effect( 'bounce', {times:2}, 'slow');
+//     $('#challenge').delay(1100).fadeOut(500);
+//     $('#battle').delay(500).fadeOut(400);
+//     setTimeout(showResults, 1500);
+//     scoreBoard();
+//   });
+// });
 
 // Show results
 function showResults() {
@@ -119,6 +140,7 @@ function showResults() {
 function scoreBoard() {
   setTimeout(trackMatches, 4000);
   setTimeout(populateScore, 4000);
+  setTimeout(playAnother, 4200);
 }
 
 // Compare choices and increment correct field
@@ -129,11 +151,14 @@ function trackMatches() {
     if(myRock === true && compScissors === true) {
       playerWin++;
       game++;
+      soundsArr[3].play();
     }else if(myRock === true && compPaper === true) {
       compWin++;
       game++;
+      soundsArr[4].play();
     }else if(myRock === true && compRock === true) {
       game++;
+      soundsArr[6].play();
     }
     break;
 
@@ -141,11 +166,14 @@ function trackMatches() {
     if(myPaper === true && compRock === true) {
       playerWin++;
       game++;
+      soundsArr[3].play();
     }else if(myPaper === true && compScissors === true) {
       compWin++;
       game++;
+      soundsArr[4].play();
     }else if(myPaper === true && compPaper === true) {
       game ++;
+      soundsArr[6].play();
     }
     break;
 
@@ -153,11 +181,14 @@ function trackMatches() {
     if(myScissors === true && compPaper === true) {
       playerWin++;
       game++;
+      soundsArr[3].play();
     }else if(myScissors === true && compRock === true) {
       compWin++;
       game++;
+      soundsArr[4].play();
     }else if(myScissors === true && compScissors === true) {
       game++;
+      soundsArr[6].play();
     }
     break;
   }
@@ -180,9 +211,22 @@ function displayWinner () {
   }
 }
 
+function playAnother() {
+  $('#nextGame').show();
+  $('#nextGame').click(function() {
+    $('#b1').show();
+    $('#b2').show();
+    $('#b3').show();
+    $('#nextGame').hide();
+    document.getElementById('yourChoice').innerHTML = 'Pick Again!';
+    hideImages();
+    endGame();
+  });
+}
 
-
-
-
-
-
+function endGame(){
+  if(playerWin === 2 || compWin === 2){
+    document.getElementById('yourChoice').innerHTML = 'Game Over!';
+    hideImages();
+  }
+}

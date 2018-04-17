@@ -36,33 +36,39 @@ $('#sciLeft').hide();
 $('#results').hide();
 
 // Player chooses rock
-$('#b1').click(function() {
-  $('#b2').hide();
-  $('#b3').hide();
-  $('#challenge').show();
-  soundsArr[0].play();
-  document.getElementById('yourChoice').innerHTML = 'Rock!';
-  myRock = true;
+$(document).ready(function() {
+  $('#b1').click(function() {
+    $('#b2').hide();
+    $('#b3').hide();
+    $('#challenge').show();
+    soundsArr[0].play();
+    document.getElementById('yourChoice').innerHTML = 'Rock!';
+    myRock = true;
+  });
 });
 
 // Player chooses paper
-$('#b2').click(function() {
-  $('#b1').hide();
-  $('#b3').hide();
-  $('#challenge').show();
-  soundsArr[0].play();
-  document.getElementById('yourChoice').innerHTML = 'Paper!';
-  myPaper = true;
+$(document).ready(function() {
+  $('#b2').click(function() {
+    $('#b1').hide();
+    $('#b3').hide();
+    $('#challenge').show();
+    soundsArr[0].play();
+    document.getElementById('yourChoice').innerHTML = 'Paper!';
+    myPaper = true;
+  });
 });
 
 // Player chooses scissors
-$('#b3').click(function() {
-  $('#b1').hide();
-  $('#b2').hide();
-  $('#challenge').show();
-  soundsArr[0].play();
-  document.getElementById('yourChoice').innerHTML = 'Scissors!';
-  myScissors = true;
+$(document).ready(function() {
+  $('#b3').click(function() {
+    $('#b1').hide();
+    $('#b2').hide();
+    $('#challenge').show();
+    soundsArr[0].play();
+    document.getElementById('yourChoice').innerHTML = 'Scissors!';
+    myScissors = true;
+  });
 });
 
 $(document).ready(function () {
@@ -76,11 +82,14 @@ $(document).ready(function () {
   });
 });
 
-setTimeout(results, 4500);
-function results() {
-  showResults();
-}
+$(document).ready(function () {
+  setTimeout(results, 4500);
+  function results() {
+    showResults();
+  }
+});
 
+// Show results
 function showResults() {
   $('#fistRight').hide();
   $('#fistLeft').hide();
@@ -97,10 +106,9 @@ function showResults() {
 
 // Challege button innerHTML change
 function showRound() {
-  document.getElementById('challenge').innerHTML = 'Round One!';
+  document.getElementById('challenge').innerHTML = 'Round One';
   $('#challenge').fadeIn(1000);
 }
-
 
 
 

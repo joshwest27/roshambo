@@ -96,7 +96,7 @@ $(document).ready(function () {
     $('#battle').show();
     $('#battle').effect( 'bounce', {times:2}, 'slow');
     $('#challenge').delay(1100).fadeOut(500);
-    $('#battle').delay(500).fadeOut(500);
+    $('#battle').delay(500).fadeOut(400);
     setTimeout(showResults, 1500);
     scoreBoard();
   });

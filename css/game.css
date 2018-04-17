@@ -60,7 +60,7 @@ button:active {
 }
 
 #challenge {
-    background-color: rgba(163, 157, 152, 0.774);
+    background-color: rgba(24, 131, 10, 0.801);
     font-size: 16px;
     font-weight: bolder;
     text-align: center;
@@ -73,12 +73,12 @@ button:active {
 }
   
 #challenge:hover {
-    background-color: rgba(92, 89, 87, 0.774);
+    background-color: rgba(20, 223, 13, 0.863);
     transform: scale(1.1);
 }
   
 #challenge:active {
-    background-color: rgba(92, 89, 87, 0.774);
+    background-color: rgba(20, 223, 13, 0.863);
     box-shadow: 0 5px rgb(34, 33, 33);
     transform: translateY(3px);
 }

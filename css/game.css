@@ -51,6 +51,17 @@ h1 {
     margin: 0px;
 }
 
+#instruct {
+    font-family: 'Stylish', sans-serif;
+    font-size: 13px;
+    display: flex;
+    justify-content: center;
+}
+
+h2 {
+    margin: 10px 0px 10px 0px;;
+}
+
 h3 {
     font-family: 'Stylish', sans-serif;
     font-size: 30px;
@@ -97,16 +108,26 @@ button:active {
     justify-content: center;
 }
 
+#peeps {
+    display: flex;
+    justify-content: center;
+}
+
+.players {
+    padding: 20px 175px 0 175px;
+    margin-bottom: 0;
+}
+
 #challenge {
     background-color: rgba(76, 212, 41, 0.774);
     font-size: 16px;
     font-weight: bolder;
     text-align: center;
-    padding: 15px 25px;
+    padding: 10px 25px;
     height: 50px;
     width: 150px;
     cursor: pointer;
-    border-radius: 12px;
+    border-radius: 20px;
     box-shadow: 0 5px black;
 }
   
@@ -164,12 +185,12 @@ button:active {
 
 #nextGame {
     background-color: rgba(143, 35, 21, 0.774);
-    font-size: 16px;
+    font-size: 14px;
     font-weight: bolder;
     text-align: center;
     padding: 10px 20px;
     height: 50px;
-    width: 150px;
+    width: 120px;
     cursor: pointer;
     border-radius: 50px;
     box-shadow: 0 5px black;

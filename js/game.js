@@ -52,12 +52,16 @@ function hideImages() {
   $('#sciLeft').hide();
   $('#results').hide();
   $('#nextGame').hide();
+  $('#scoreboard').hide();
+  $('.players').hide();
+  // $('#instruct').hide();
 }
 hideImages();
 initiateMatch();
+youPick();
 
 // Player chooses rock
-$(document).ready(function() {
+function pickRock() {
   $('#b1').click(function() {
     soundsArr[0].play();
     $('#b2').hide();
@@ -67,10 +71,10 @@ $(document).ready(function() {
     playerCoice = 'Rock';
     myRock = true;
   });
-});
+}
 
 // Player chooses paper
-$(document).ready(function() {
+function pickPaper() {
   $('#b2').click(function() {
     soundsArr[0].play();
     $('#b1').hide();
@@ -80,10 +84,10 @@ $(document).ready(function() {
     playerCoice = 'Paper';
     myPaper = true;
   });
-});
+}
 
 // Player chooses scissors
-$(document).ready(function() {
+function pickScissors() {
   $('#b3').click(function() {
     soundsArr[0].play();
     $('#b1').hide();
@@ -93,40 +97,35 @@ $(document).ready(function() {
     playerCoice = 'Scissors';
     myScissors = true;
   });
-});
+}
+
+// Make a choice
+function youPick() {
+  pickRock();
+  pickPaper();
+  pickScissors();
+}
 
 // Initialize game when Good Luck/Next Match button is pushed
 function initiateMatch() {
   $('#challenge').click(function() {
-    // soundsArr[1].play();
+    soundsArr[1].play();
     randNumber();
     $('#battle').show();
-    $('#battle').effect( 'bounce', {times:2}, 'slow');
+    $('#battle').effect( 'bounce', {times:3}, 'slow');
     $('#challenge').delay(1100).fadeOut(500);
+    $('#buttons').delay(1000).fadeOut(550);
     $('#battle').delay(500).fadeOut(400);
     setTimeout(showResults, 1500);
     scoreBoard();
   });
 }
 
-// Initialize game when Good Luck/Next Match button is pushed
-// $(document).ready(function () {
-//   $('#challenge').click(function() {
-//     // soundsArr[1].play();
-//     randNumber();
-//     $('#battle').show();
-//     $('#battle').effect( 'bounce', {times:2}, 'slow');
-//     $('#challenge').delay(1100).fadeOut(500);
-//     $('#battle').delay(500).fadeOut(400);
-//     setTimeout(showResults, 1500);
-//     scoreBoard();
-//   });
-// });
-
 // Show results
 function showResults() {
   $('#fistRight').delay(1000).hide();
   $('#fistLeft').delay(1000).hide();
+  $('.players').delay(1500).fadeIn(1000);
   $('#battle').delay(2000).fadeIn(1000);
   if(myRock === true){
     $('#fistRight').replaceWith('<img id="fistRight" src="img/rockRight.jpg"/>', compChoice).fadeIn(1000);
@@ -139,8 +138,8 @@ function showResults() {
 
 function scoreBoard() {
   setTimeout(trackMatches, 4000);
-  setTimeout(populateScore, 4000);
-  setTimeout(playAnother, 4200);
+  setTimeout(displayWinner, 4000);
+  setTimeout(playAgain, 4200);
 }
 
 // Compare choices and increment correct field
@@ -211,22 +210,21 @@ function displayWinner () {
   }
 }
 
-function playAnother() {
-  $('#nextGame').show();
-  $('#nextGame').click(function() {
-    $('#b1').show();
-    $('#b2').show();
-    $('#b3').show();
-    $('#nextGame').hide();
-    document.getElementById('yourChoice').innerHTML = 'Pick Again!';
-    hideImages();
-    endGame();
-  });
+function rpsButtons() {
+  $('#buttons').show();
+  $('#b1').show();
+  $('#b2').show();
+  $('#b3').show();
+  $('#rockBtn').show();
+  $('#paperBtn').show();
+  $('#scissorBtn').show();
 }
 
-function endGame(){
-  if(playerWin === 2 || compWin === 2){
-    document.getElementById('yourChoice').innerHTML = 'Game Over!';
-    hideImages();
-  }
+function playAgain() {
+  $(document).ready(function(){
+    $('#nextGame').show();
+    $('#nextGame').click(function(){
+      location.reload(true);
+    });
+  });
 }

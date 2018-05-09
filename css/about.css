@@ -34,6 +34,21 @@ body {
     right: 45px;
     cursor: pointer;
 }
+
+#sound {
+    position: absolute;
+    top: 110px;
+    right: 45px;
+    cursor: pointer;
+  }
+  
+  #sound:hover {
+    transform: scale(1.2);
+    position: absolute;
+    top: 110px;
+    right: 45px;
+    cursor: pointer;
+  }
   
 h1 {
     font-family: 'Black And White Picture', sans-serif;
